@@ -1,0 +1,76 @@
+@import "../../../../../styles/partials/var";
+
+img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1.5rem;
+}
+
+figure {
+  text-align: center;
+}
+figcaption {
+  width: 100%;
+}
+
+.product-container {
+  width: 250px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.product-info {
+  border-top: 1px solid $primary-gray;
+  width: 100%;
+}
+
+.price-container {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span:first-child {
+    color: $primary-green;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  span:last-child {
+    color: $primary-red;
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+
+.actions-container {
+  display: flex;
+  width: 100%;
+
+  button:first-child {
+    background-color: $primary-green;
+    color: $white;
+    flex-grow: 1;
+    flex-shrink: 0;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px 0 0 2px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  button:last-child {
+    border: 1px solid $primary-gray;
+    border-radius: 0 2px 2px 0;
+    color: $primary-gray;
+    font-weight: bold;
+    background-color: $white;
+    height: 40px;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+}

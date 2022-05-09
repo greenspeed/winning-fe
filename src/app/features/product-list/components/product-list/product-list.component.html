@@ -1,0 +1,8 @@
+<button class="back" type="button" routerLink="/home">Back to Home</button>
+<div class="product-list-container">
+  <app-product
+    [product]="product"
+    class="product"
+    *ngFor="let product of productList$ | async"
+  ></app-product>
+</div>

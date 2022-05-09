@@ -1,0 +1,20 @@
+<div class="product-container">
+  <figure>
+    <img [src]="product.image" alt="product Image" />
+    <figcaption>{{ product.name }}</figcaption>
+  </figure>
+  <div class="product-info">
+    <div class="price-container">
+      <span>{{ product.price | currency: "$":"symbol":"1.0-2" }}</span>
+      <span *ngIf="product.rrp"
+        >{{ product.rrp - product.price | currency: "$":"symbol":"1.0-2" }} off
+        RRP of
+        {{ product.rrp | currency: "$":"symbol":"1.0-2" }}
+      </span>
+    </div>
+    <div class="actions-container">
+      <button type="button" (click)="openModal(product)">Add to Cart</button>
+      <button type="button">Compare</button>
+    </div>
+  </div>
+</div>
